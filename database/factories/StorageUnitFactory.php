@@ -14,7 +14,9 @@ class StorageUnitFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'count' => $this->faker->numberBetween(1, 40),
+            'product_id' => $this->faker->numberBetween(1, 10),
+            'warehouse_id' => $this->faker->numberBetween(1, 5)
         ];
     }
 }
