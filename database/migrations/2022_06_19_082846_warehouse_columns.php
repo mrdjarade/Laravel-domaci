@@ -14,8 +14,8 @@ class WarehouseColumns extends Migration
     public function up()
     {
         Schema::table('warehouses', function (Blueprint $table) {
-            $table->decimal('manager');
-            $table->decimal('phone');
+            $table->string('manager');
+            $table->string('phone');
         });
     }
 

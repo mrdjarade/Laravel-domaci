@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\WarehouseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('login', [LoginController::class, 'login']);
+Route::post('register', [LoginController::class, 'register']);
+
 Route::middleware('auth:sanctum')->group(function () {
+    Route::post('logout', [LoginController::class, 'logout']);
     Route::apiResource('warehouses', WarehouseController::class);
-    Route::post('warehouese/{id}/product', WarehouseController::class, 'addProduct');
+    Route::post('warehouese/{id}/product', [WarehouseController::class, 'addProduct']);
 });
