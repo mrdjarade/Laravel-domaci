@@ -22,5 +22,5 @@ Route::post('register', [LoginController::class, 'register']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('logout', [LoginController::class, 'logout']);
     Route::apiResource('warehouses', WarehouseController::class);
-    Route::post('warehouese/{id}/product', [WarehouseController::class, 'addProduct']);
+    Route::post('warehouses/{id}/product', [WarehouseController::class, 'addProduct']);
 });

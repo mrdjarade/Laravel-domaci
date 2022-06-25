@@ -17,7 +17,7 @@ class ProductFactory extends Factory
             'name' => $this->faker->word,
             'description' => $this->faker->realText,
             'weight' => $this->faker->randomFloat(2, 1, 40),
-            'volume' => $this->faker->randomFloat(2, 2, 3)
+            'volume' => $this->faker->randomFloat(2, 2, 30)
         ];
     }
 }

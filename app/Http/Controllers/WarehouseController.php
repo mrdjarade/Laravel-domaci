@@ -68,7 +68,7 @@ class WarehouseController extends Controller
 
     public function addProduct($id, Request $request)
     {
-        $storageUnit = StorageUnit::create([
+        StorageUnit::create([
             "count" => $request->count,
             "product_id" => $request->product_id,
             'warehouse_id' => $id
